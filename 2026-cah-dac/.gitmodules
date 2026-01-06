@@ -1,0 +1,12 @@
+[submodule "referenced_repos/elastic-detection-rules"]
+	path = referenced_repos/elastic-detection-rules
+	url = https://github.com/elastic/detection-rules
+[submodule "referenced_repos/elastic-protections-artifacts"]
+	path = referenced_repos/elastic-protections-artifacts
+	url = https://github.com/elastic/protections-artifacts
+[submodule "referenced_repos/splunk-security-content"]
+	path = referenced_repos/splunk-security-content
+	url = https://github.com/splunk/security_content
+[submodule "referenced_repos/sigma-detections"]
+	path = referenced_repos/sigma-detections
+	url = https://github.com/SigmaHQ/sigma
