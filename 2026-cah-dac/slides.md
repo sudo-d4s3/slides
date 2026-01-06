@@ -70,7 +70,7 @@ Waaay more than just writing detections:
 
 ::: incremental
  - binary signatures
- - behavioral patterns
+ - behavioral signatures
  - anomalies 
 :::
 
@@ -193,11 +193,23 @@ rule Windows_Hacktool_Mimikatz_674fd079 {
 
 ### [ Behavioral Signatures ]{.no_title_overflow}
 
+<br>
+<br>
+<br>
+
 ```eql
 file where host.os.type == "windows" and file.name : "mimilsa.log" and process.name : "lsass.exe"
 ```
 
+<br>
+<br>
+<br>
+<br>
+
 ### [ Behavioral Signatures (cont.) ]{.no_title_overflow}
+
+<br>
+<br>
 
 ```splunk
 | tstats `security_content_summariesonly` count min(_time) as firstTime max(_time)
@@ -212,7 +224,11 @@ file where host.os.type == "windows" and file.name : "mimilsa.log" and process.n
   | `windows_mimikatz_binary_execution_filter`
 ```
 
+<br>
+
 ### [ Behavioral Signatures (cont.) (cont.) ]{.no_title_overflow}
+
+<br>
 
 ```sigma
     selection_tools_name:
@@ -247,6 +263,7 @@ file where host.os.type == "windows" and file.name : "mimilsa.log" and process.n
     condition: 1 of selection_*
 ```
 
+<br>
 
 
 ## [ Good Detections? ]{.no_title_overflow}
@@ -278,6 +295,8 @@ detection to copy:
 
 ## [ Consumable Format ]{.no_title_overflow}
 
+<br>
+
 ::: incremental
  - Holds detection logic
  - Holds metadata
@@ -289,7 +308,13 @@ detection to copy:
  - Easily Parsed
 :::
 
+<br>
+<br>
+<br>
+
 ### Elastic Toml
+
+<br>
 
 ```
 [metadata]
@@ -402,7 +427,13 @@ name = "Credential Access"
 reference = "https://attack.mitre.org/tactics/TA0006/"
 ```
 
+<br>
+<br>
+<br>
+
 ### Splunk Yaml
+
+<br>
 
 ```
 name: Windows Mimikatz Binary Execution
@@ -504,7 +535,14 @@ tests:
     sourcetype: XmlWinEventLog
 ```
 
+<br>
+<br>
+<br>
+
 ## Sigma
+
+<br>
+<br>
 
 ::: incremental
  - Generic Behavioral Signature Format for SIEMs
@@ -516,7 +554,14 @@ tests:
      - Keeping everything in a unified format
 :::
 
+<br>
+<br>
+<br>
+<br>
+
 ## Sigma Example
+
+<br>
 
 ::: citation
 ```
@@ -576,6 +621,10 @@ falsepositives:
 level: high
 ```
 :::
+
+<br>
+<br>
+<br>
 
 ::: notes
 
@@ -744,10 +793,18 @@ The ones shown are `all` which changes an `or` statement to an `and` statement, 
 
 ### Sigma Parts
 
+<br>
+<br>
+
 ::: incremental
  - Backends
  - Pipeline
 :::
+
+<br>
+<br>
+<br>
+<br>
 
 ::: notes
 Backends handle the conversion between the sigma yaml doc and the siem specified format.
