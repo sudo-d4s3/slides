@@ -10,3 +10,6 @@
 [submodule "referenced_repos/sigma-detections"]
 	path = referenced_repos/sigma-detections
 	url = https://github.com/SigmaHQ/sigma
+[submodule "referenced_repos/dac-demo"]
+	path = referenced_repos/dac-demo
+	url = https://github.com/sudo-d4s3/dac-demo
